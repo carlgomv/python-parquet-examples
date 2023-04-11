@@ -18,5 +18,7 @@ archivo_salida = path + "\Out_Datos_00_MIGRACION_PROCESSES.csv"
 df = pd.read_csv(archivo_entrada)
 
 print(df.describe())
-
+columnas=['acts','pretensions','observations']
+for columna in columnas:
+    df[columna] = df[columna].apply(lambda x: re.sub(r'[^a-zA-Z0-9 .,;-]+', '', str(x)))
 df.to_csv(archivo_salida, sep='|', quotechar = '"', index=False)
