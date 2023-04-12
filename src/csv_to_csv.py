@@ -1,11 +1,11 @@
 import csv
 import os
 import pandas as pd
-
+import re
 # Define el path utilizando la función join del módulo os
 # G:\Mi unidad\Proyectos\En Curso\EGS\USTA\Migración
-path = os.path.join("G:\\","Mi unidad", "Proyectos", "En Curso", "EGS", "USTA", "Migración")
-
+# path = os.path.join("G:\\","Mi unidad", "Proyectos", "En Curso", "EGS", "USTA", "Migración")
+path = os.path.join("C:\\","Users","carlo","Google Drive", "Proyectos", "En Curso", "EGS", "USTA", "Migración")
 # Imprime el path resultante
 print(path)
 
