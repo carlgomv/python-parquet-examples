@@ -22,4 +22,11 @@ columnas=['acts','pretensions','observations']
 for columna in columnas:
     df[columna] = df[columna].apply(lambda x: re.sub(r'[^a-zA-Z0-9 .,;-]+', '', str(x)))
 
+for columna in columnas:
+    df[columna].fillna('NULL', inplace=True)
+    df.loc[df[columna] == 'nan', columna] = 'NULL'
+
+# df['type_area_id'].fillna('NULL', inplace=True)
+# print(df.describe())
+
 df.to_csv(archivo_salida, sep='|', quotechar = '"', index=False)
