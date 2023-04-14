@@ -10,15 +10,16 @@ path = os.path.join("C:\\","Users","carlo","Google Drive", "Proyectos", "En Curs
 print(path)
 
 # Especifica la ruta del archivo CSV que quieres leer
-archivo_entrada = path + "\\Up_00_MIGRACION_PROCESSES.csv"
+archivo_entrada = path + "\\Datos_01_MIGRACION_QUERIES.csv"
 
 # Especifica la ruta del archivo CSV que quieres guardar
-archivo_salida = path + "\\Out_Up_00_MIGRACION_PROCESSES.csv"
+archivo_salida = path + "\\Out_Datos_01_MIGRACION_QUERIES.csv"
 
 df = pd.read_csv(archivo_entrada)
 
 print(df.describe())
-columnas=['acts','pretensions','observations']
+	
+columnas=['acts','pretensions','concept','observations']
 for columna in columnas:
     df[columna] = df[columna].apply(lambda x: re.sub(r'[^a-zA-Z0-9 .,;-]+', '', str(x)))
 
