@@ -10,10 +10,10 @@ path = os.path.join("C:\\","Users","carlo","Google Drive", "Proyectos", "En Curs
 print(path)
 
 # Especifica la ruta del archivo CSV que quieres leer
-archivo_entrada = path + "\Datos_00_MIGRACION_PROCESSES.csv"
+archivo_entrada = path + "\\Up_00_MIGRACION_PROCESSES.csv"
 
 # Especifica la ruta del archivo CSV que quieres guardar
-archivo_salida = path + "\Out_Datos_00_MIGRACION_PROCESSES.csv"
+archivo_salida = path + "\\Out_Up_00_MIGRACION_PROCESSES.csv"
 
 df = pd.read_csv(archivo_entrada)
 
